@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class TestPic extends React.Component {
+export class ImageViewer extends React.Component {
     constructor(props, pic, token) {
         super(props, pic, token);
         this.state = {
@@ -60,7 +60,7 @@ export class TestPic extends React.Component {
             pic:""
           })
         };
-        fetch('http://192.168.12.152:8443/UpdateFileInfo', requestOptions)
+        fetch('http://192.168.12.152:8443/UpdateImageInfo', requestOptions)
         .then(
         //  alert("сохранено")
         ).catch(error => {
@@ -78,7 +78,7 @@ export class TestPic extends React.Component {
               pictureId: this.state.pictureId
             })
         };
-        fetch('http://192.168.12.152:8443/GetOnePic', requestOptions)
+        fetch('http://192.168.12.152:8443/DownloadOneImage', requestOptions)
         .then(async response => { let data = await response.json();
         const fileReaderInstance = new FileReader();
         const Buffer = require('buffer').Buffer;

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {Entity, PeopleInfo} from './Person/Person';
-import {WorkTaskInfo, WorkTaskId} from './WorkTask/WorkTask'
-import {TestPic} from './FileUploader/ImageViewer'
+import {WorkTaskInfo, WorkTaskId} from './WorkTask/WorkTask';
+import {ImageViewer} from './FileUploader/ImageViewer';
+import {FileUploader} from './FileUploader/FileUploader';
 
 ReactDOM.render(
   <Entity />,
@@ -26,7 +27,12 @@ ReactDOM.render(
 );
 
 ReactDOM.render(
-  <TestPic/>,
-  document.getElementById('TestElem')
+  <ImageViewer/>,
+  document.getElementById('ImageViewer')
+);
+
+ReactDOM.render(
+  <FileUploader/>,
+  document.getElementById('FileUploader')
 );
 
